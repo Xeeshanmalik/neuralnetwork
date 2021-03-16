@@ -106,7 +106,7 @@ class network(neuralnetwork, neuron, edge):
                 for edge in hiddenlayer_node.in_edge:
                     tmp_sum += edge.from_node.value*edge.weight
                 tmp_sum += hiddenlayer_node.bias
-                hiddenlayer_node.value = edge.sigmoid(tmp_sum)
+                hiddenlayer_node.value = self.sigmoid(tmp_sum)
 
     # Private Method
     def __back_propagation_error(self, Y):
