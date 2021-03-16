@@ -29,8 +29,6 @@ class edge:
         self.from_node=None
         self.to_node=None
 
-    def sigmoid(self,x):
-        return 1/(1+math.exp(-x))
 # -------------------------------------------------------------------
 
 
@@ -66,6 +64,10 @@ class network(neuralnetwork, neuron, edge):
             [[1, 1], [0]]
         ]
         self.iteration=3000
+
+
+    def sigmoid(self,x):
+        return 1/(1+math.exp(-x))
 
     # Private Method
     def __init(self):
