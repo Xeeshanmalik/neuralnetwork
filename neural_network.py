@@ -5,7 +5,7 @@ import math, random
 from abc import abstractmethod
 
 
-class major_components:
+class neuralnetwork:
 
     @abstractmethod
     def initialize(self, initializing_array):
@@ -53,7 +53,7 @@ class neuron:
 
 # --------------------------------------------------------------------
 
-class network(major_components, neuron, edge):
+class network(neuralnetwork, neuron, edge):
 
     def __init__(self, *layers):
         self.layers = []
